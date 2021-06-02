@@ -20,11 +20,12 @@ public class BoardController {
 	public String write() {
 		return "BoardController:write";
 	}
-	
+	//http://localhost:8080/hellospring03/board/write
 	
 	@ResponseBody
 	@RequestMapping("/board/view/{no}")
 	public String view(@PathVariable("no") Long boardNo) {
 		return "BoardController:view("+ boardNo+1 +")";
 	}
+	//http://localhost:8080/hellospring03/board/view/10
 }

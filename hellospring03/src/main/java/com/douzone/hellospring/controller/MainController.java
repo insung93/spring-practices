@@ -13,4 +13,6 @@ public class MainController {
 	public String main() {
 		return "MainController.main()";
 	}
+	//http://localhost:8080/hellospring03/
+	//http://localhost:8080/hellospring03/main
 }
