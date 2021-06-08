@@ -13,4 +13,5 @@
 	    |---- EmaillistRepository
 	com.douzone.emaillist.vo
 	    |---- EmaillistVo
-dfsfsadsads
+7. views/*.jsp - jsp 파일 정리
+8. Handler 처리 작업
