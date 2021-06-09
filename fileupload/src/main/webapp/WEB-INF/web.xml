@@ -3,11 +3,17 @@
 	xmlns="http://JAVA.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	<display-name>guestbook03</display-name>
+	<display-name>fileupload</display-name>
+
+	<!-- Context Parameter -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
 
 	<!-- Context Load Listener -->
 	<listener>
-		<listener-class> org.springframework.web.context.ContextLoaderListener
+		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
 
@@ -19,32 +25,23 @@
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
-
 	</filter>
 
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-	<!-- ContextParameter -->
-	<context-param>
-		<param-name> contextConfigLocation </param-name>
-		<param-value>/WEB-INF/applicationContext.xml</param-value>
-	</context-param>
-
-	<!-- DispatcherServlet ( front controller ) -->
+	
+	<!-- DisptcherServlet(Front Controller) -->	
 	<servlet>
 		<servlet-name>spring</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet
-		</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-
-
+	</servlet-mapping>	
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
