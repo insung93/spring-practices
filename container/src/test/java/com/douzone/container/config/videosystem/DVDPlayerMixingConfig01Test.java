@@ -1,4 +1,4 @@
-package com.douzone.container.config.user;
+package com.douzone.container.config.videosystem;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -8,17 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.douzone.container.user.User;
+import com.douzone.container.config.videosystem.mixing.DVDPlayerConfig;
+import com.douzone.container.videosystem.DVDPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-// @ContextConfiguration(classes={AppConfig01.class})
-@ContextConfiguration(locations={"/com/douzone/container/config/user/applicationContext02.xml"})
-public class XmlConfigTest {
+@ContextConfiguration(classes=DVDPlayerConfig.class)
+public class DVDPlayerMixingConfig01Test {
 	@Autowired
-	private User user;
+	private DVDPlayer player;
 	
 	@Test
-	public void testUserNotNull() {
-		assertNotNull(user);
+	public void testPlayer() {
+		assertNotNull(player);
 	}
 }

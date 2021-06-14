@@ -9,11 +9,11 @@
 	</parent>
 	<artifactId>container</artifactId>
 	<packaging>jar</packaging>
-
+	
 	<properties>
-		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
+	     <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
 	</properties>
-
+	
 	<dependencies>
 		<!-- Spring Context(Container) -->
 		<dependency>
@@ -21,13 +21,7 @@
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		<!-- Spring Aspect -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-
+		
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -46,8 +40,6 @@
 			<version>1.19.0</version>
 			<scope>test</scope>
 		</dependency>
-
-	</dependencies>
-
-
+		
+	</dependencies>	
 </project>
